@@ -19,12 +19,17 @@ run/main_scene="uid://d16rc67h4lop6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/Textures/icon.svg"
 
+[autoload]
+
+Global="*uid://dx3gx6swf63il"
+
 [file_customization]
 
 folder_colors={
 "res://Assets/": "green",
 "res://Scenes/": "yellow",
-"res://Scripts/": "orange"
+"res://Scripts/": "orange",
+"res://Testing/": "gray"
 }
 
 [input]

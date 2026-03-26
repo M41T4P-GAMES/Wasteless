@@ -3,17 +3,17 @@ var health: float = 100
 var money: float = 50
 var happiness: float = 50
 
-func getHealth():
+func get_health():
 	return health
 	
-func getMoney():
+func get_money():
 	return money
 	
-func getHappiness():
+func get_happiness():
 	return happiness
 	
 
-func setHealth(newHealth: float):
+func set_health(newHealth: float):
 	health=newHealth
 	if health<=0:
 		print("Game over")
@@ -21,12 +21,12 @@ func setHealth(newHealth: float):
 	elif health>100:
 		health =100
 		
-func setMoney(newMoney: float):
+func set_money(newMoney: float):
 	money = newMoney
 	if money<0:
 		money=0
 		
-func setHappiness(newHappiness: float):
+func set_happiness(newHappiness: float):
 	happiness=newHappiness
 	if happiness<=0:
 		print("Game over")
@@ -34,24 +34,23 @@ func setHappiness(newHappiness: float):
 	elif happiness>100:
 		happiness =100
 
-func spendMoney(spending: float):
-	setMoney(money-spending)
+func spend_money(spending: float):
+	set_money(money-spending)
 		
-func makeMoney(earn: float):
-	setMoney(money+earn)
+func make_money(earn: float):
+	set_money(money+earn)
 	
 func sadder(tears: float):
-	
-	setHappiness(happiness-tears)
+	set_happiness(happiness-tears)
 	
 func happier(joy: float):
-	setHappiness(happiness+joy)
+	set_happiness(happiness+joy)
 	
 func hurt(damage: float):
-	setMoney(health-damage)
+	set_health(health-damage)
 		
 func heal(points: float):
-	setMoney(health+points)
+	set_health(health+points)
 	
 	
 	

@@ -24,8 +24,6 @@ shape = SubResource("RectangleShape2D_a3d8c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=617061385]
 shape = SubResource("RectangleShape2D_xpcdj")
 
-<<<<<<< Updated upstream
-[node name="Bars" parent="." unique_id=115414059 instance=ExtResource("3_xpcdj")]
-=======
-[node name="Stats" parent="." unique_id=465868973 instance=ExtResource("3_xpcdj")]
->>>>>>> Stashed changes
+
+[node name="Stats" parent="." unique_id=115414059 instance=ExtResource("3_xpcdj")]
+

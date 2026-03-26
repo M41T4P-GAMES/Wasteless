@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bbifu33a1td04"]
+[gd_scene format=3 uid="uid://dn10sp8rt5d0l"]
 
 [ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="1_hwvyd"]
 [ext_resource type="Script" uid="uid://dcj8rid366fi5" path="res://Scripts/Interactables/cooking.gd" id="1_v5sos"]
@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5sos"]
 size = Vector2(128, 128)
 
-[node name="Node2D" type="Area2D" unique_id=1722946303]
+[node name="Cooking" type="Area2D" unique_id=1722946303]
 script = ExtResource("1_v5sos")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1504270659]
@@ -18,6 +18,7 @@ shape = SubResource("RectangleShape2D_v5sos")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1792601233]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=539852546]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

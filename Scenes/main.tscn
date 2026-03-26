@@ -1,7 +1,40 @@
 [gd_scene format=3 uid="uid://d16rc67h4lop6"]
 
-[ext_resource type="PackedScene" uid="uid://dgubnmtp1pwdl" path="res://Scenes/Systems/bars.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://cyytr2t4exfd5" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://jhqrofpmbt7p" path="res://Scenes/Interactables/sofa.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cv87xc8r31jpw" path="res://Scenes/Systems/billing.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c50cfyr6wqlsp" path="res://Scenes/Interactables/shower.tscn" id="3_kry3j"]
+[ext_resource type="PackedScene" uid="uid://dn10sp8rt5d0l" path="res://Scenes/Interactables/cooking.tscn" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://bck5fh4l32aw0" path="res://Scenes/Systems/day_count.tscn" id="6_21xkr"]
 
 [node name="Main" type="Node2D" unique_id=1340774565]
 
-[node name="Bars" parent="." unique_id=115414059 instance=ExtResource("1_jjgbg")]
+[node name="StartPos" type="Marker2D" parent="." unique_id=950694550]
+position = Vector2(640, 224)
+
+[node name="Player" parent="." unique_id=724740399 instance=ExtResource("1_jjgbg")]
+position = Vector2(640, 224)
+
+[node name="Sofa" parent="." unique_id=1042054607 instance=ExtResource("2_bo1nx")]
+position = Vector2(120, 176)
+
+[node name="Shower" parent="." unique_id=680826184 instance=ExtResource("3_kry3j")]
+position = Vector2(320, 456)
+
+[node name="Cooking" parent="." unique_id=1722946303 instance=ExtResource("4_21xkr")]
+position = Vector2(896, 440)
+
+[node name="Billing" parent="." unique_id=1774312984 instance=ExtResource("3_8gbba")]
+visible = false
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 960.0
+offset_bottom = 512.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2011890766]
+
+[node name="DayCount" parent="CanvasLayer" unique_id=1081439678 instance=ExtResource("6_21xkr")]
+offset_left = -52.0
+offset_top = 67.0
+offset_right = -12.0
+offset_bottom = 107.0

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bjkkqwktpvqgx" path="res://Scripts/billing.gd" id="1_qbey1"]
 
 [node name="Billing" type="PanelContainer" unique_id=1774312984]
+process_mode = 3
 offset_right = 768.0
 offset_bottom = 384.0
 script = ExtResource("1_qbey1")
@@ -71,6 +72,8 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "€200"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1394225458]
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1394225458]
 layout_mode = 2
 text = "Continue"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

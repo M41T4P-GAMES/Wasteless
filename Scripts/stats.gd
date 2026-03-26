@@ -1,5 +1,8 @@
 extends Node
 
+const MAX_HEALTH = 100
+const MAX_HAPPINESS = 100
+
 var used_electricity : float = 0
 var used_water : float = 0
 var fridge_stock: int = 0
@@ -27,8 +30,8 @@ func set_health(newHealth: float):
 	if health <= 0:
 		print("Game over")
 		return
-	elif health > 100:
-		health = 100
+	elif health > MAX_HEALTH:
+		health = MAX_HEALTH
 		
 func set_money(newMoney: float):
 	money = newMoney
@@ -42,26 +45,26 @@ func set_happiness(newHappiness: float):
 	if happiness <= 0:
 		print("Game over")
 		return
-	elif happiness > 100:
-		happiness = 100
+	elif happiness > MAX_HAPPINESS:
+		happiness = MAX_HAPPINESS
 
 func spend_money(spending: float):
 	return set_money(money-spending)
 		
 func make_money(earn: float):
-	set_money(money+earn)
+	set_money(money + earn)
 	
 func sadder(tears: float):
-	set_happiness(happiness-tears)
+	set_happiness(happiness - tears)
 	
 func happier(joy: float):
-	set_happiness(happiness+joy)
+	set_happiness(happiness + joy)
 	
 func hurt(damage: float):
-	set_health(health-damage)
+	set_health(health - damage)
 
 func heal(points: float):
-	set_health(health+points)
+	set_health(health + points)
 
 
 func set_used_electricity(electricity : float) -> void:

@@ -7,7 +7,13 @@ func _process(delta: float) -> void:
 
 
 func _on_day_timer_timeout() -> void:
-	increase_day_count()
+	day_end()
+
+
+func day_end() -> void:
+	get_tree().paused = true
+	var stats = Global.get_stats()
+	Global.get_billing_screen().calculate(stats.used_water, stats.used_electricity)
 
 
 func increase_day_count() -> void:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ulwogkyabnag" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="1_uvnfx"]
+[ext_resource type="PackedScene" uid="uid://dgubnmtp1pwdl" path="res://Scenes/Systems/bars.tscn" id="3_xpcdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3d8c"]
 size = Vector2(128, 128)
@@ -22,3 +23,5 @@ shape = SubResource("RectangleShape2D_a3d8c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=617061385]
 shape = SubResource("RectangleShape2D_xpcdj")
+
+[node name="Bars" parent="." unique_id=115414059 instance=ExtResource("3_xpcdj")]

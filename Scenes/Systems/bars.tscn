@@ -1,6 +1,30 @@
 [gd_scene format=3 uid="uid://dgubnmtp1pwdl"]
 
 [ext_resource type="Script" uid="uid://c4hv0o5g2w7fb" path="res://Scripts/bars.gd" id="1_n1mae"]
+[ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="2_jhv3a"]
 
-[node name="Bars" type="Node" unique_id=215855990]
+[node name="Bars" type="CanvasLayer" unique_id=465868973]
 script = ExtResource("1_n1mae")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=918936238]
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 515.0
+offset_bottom = 83.0
+nine_patch_stretch = true
+texture_progress = ExtResource("2_jhv3a")
+
+[node name="HappinessBar" type="TextureProgressBar" parent="." unique_id=1098592339]
+offset_left = -1.0
+offset_top = 83.0
+offset_right = 515.0
+offset_bottom = 164.0
+nine_patch_stretch = true
+texture_progress = ExtResource("2_jhv3a")
+
+[node name="Money" type="Label" parent="." unique_id=580386907]
+offset_left = 854.0
+offset_top = -3.0
+offset_right = 1153.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 48

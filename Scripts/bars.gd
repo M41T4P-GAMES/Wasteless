@@ -1,7 +1,13 @@
 extends Node
+
 var health: float = 100
 var money: float = 50
 var happiness: float = 50
+
+func _physics_process(_delta: float):
+	$HealthBar.value = health
+	$HappinessBar.value = happiness
+	$Money.text = "$%0.2f" % money
 
 func get_health():
 	return health
@@ -11,28 +17,27 @@ func get_money():
 	
 func get_happiness():
 	return happiness
-	
 
 func set_health(newHealth: float):
-	health=newHealth
-	if health<=0:
+	health = newHealth
+	if health <= 0:
 		print("Game over")
 		return
-	elif health>100:
-		health =100
+	elif health > 100:
+		health = 100
 		
 func set_money(newMoney: float):
 	money = newMoney
-	if money<0:
-		money=0
+	if money < 0:
+		money = 0
 		
 func set_happiness(newHappiness: float):
-	happiness=newHappiness
-	if happiness<=0:
+	happiness = newHappiness
+	if happiness <= 0:
 		print("Game over")
 		return
-	elif happiness>100:
-		happiness =100
+	elif happiness > 100:
+		happiness = 100
 
 func spend_money(spending: float):
 	set_money(money-spending)

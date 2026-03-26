@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://jhqrofpmbt7p"]
+
+[ext_resource type="Script" uid="uid://dxnyvp6jxely5" path="res://Scripts/Interactables/sofa.gd" id="1_plaxa"]
+[ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="2_7qaov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s1au"]
+size = Vector2(125, 128)
+
+[node name="Sofa" type="Area2D" unique_id=1042054607]
+script = ExtResource("1_plaxa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=409398416]
+texture = ExtResource("2_7qaov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752216239]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_2s1au")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1454690486]
+
+[node name="ModeUI" type="Control" parent="CanvasLayer" unique_id=1545761984]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ModeUI" unique_id=985095358]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -117.0
+offset_right = 142.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorkButton" type="Button" parent="CanvasLayer/ModeUI/VBoxContainer" unique_id=1099682012]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Work"
+
+[node name="RestingButton" type="Button" parent="CanvasLayer/ModeUI/VBoxContainer" unique_id=147598469]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Rest"
+
+[node name="MoneyGainTimer" type="Timer" parent="." unique_id=383143198]
+
+[connection signal="pressed" from="CanvasLayer/ModeUI/VBoxContainer/WorkButton" to="." method="_on_work_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ModeUI/VBoxContainer/RestingButton" to="." method="_on_resting_button_pressed"]
+[connection signal="timeout" from="MoneyGainTimer" to="." method="_on_money_gain_timer_timeout"]

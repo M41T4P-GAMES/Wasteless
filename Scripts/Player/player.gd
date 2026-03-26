@@ -1,9 +1,15 @@
+class_name Player
 extends CharacterBody2D
 
 const SPEED = 300
 
+var can_move = true
+
 func _physics_process(_delta: float) -> void:
-	velocity = Input.get_vector("Left", "Right", "Up", "Down") * SPEED
+	if can_move:
+		velocity = Input.get_vector("Left", "Right", "Up", "Down") * SPEED
+	else:
+		velocity = Vector2.ZERO
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:

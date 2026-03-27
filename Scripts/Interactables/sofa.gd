@@ -27,15 +27,26 @@ func _process(delta: float) -> void:
 	print("Fridge Stock: " + str(Global.get_stats().fridge_stock))
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("esc"):
+		if mode != Mode.NONE:
+			close()
+
+
+func close() -> void:
+	$CanvasLayer/ModeUI.hide()
+	mode = Mode.NONE
+	$MoneyGainTimer.stop()
+	Global.get_player().can_move = true
+
+
 func interact() -> void:
 	var player : Player = Global.get_player()
 	player.can_move = !player.can_move
 	if player.can_move == false:
 		$CanvasLayer/ModeUI.show()
 	else:
-		$CanvasLayer/ModeUI.hide()
-		mode = Mode.NONE
-		$MoneyGainTimer.stop()
+		close()
 
 
 func _on_work_button_pressed() -> void:

@@ -16,7 +16,7 @@ theme = ExtResource("1_k4wdn")
 script = ExtResource("1_seb7y")
 
 [node name="DayTimer" type="Timer" parent="." unique_id=910106611]
-wait_time = 120.0
+wait_time = 90.0
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1310117722]

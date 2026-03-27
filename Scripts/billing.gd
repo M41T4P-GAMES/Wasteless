@@ -1,7 +1,7 @@
 extends PanelContainer
 
-const WATER_COST = 10
-const ELECTRICITY_COST = 20
+const WATER_COST = 3
+const ELECTRICITY_COST = 10
 
 var water_total = 0.0
 var electricity_total = 0.0

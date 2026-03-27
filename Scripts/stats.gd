@@ -11,7 +11,7 @@ var fridge_stock: int = 0
 
 var health: float = 100
 var money: float = 50
-var happiness: float = 50
+var happiness: float = 75
 
 var money_spent : float = 0
 var money_earned : float = 0

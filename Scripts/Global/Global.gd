@@ -18,3 +18,7 @@ func get_day_count() -> Node:
 
 func get_start_pos() -> Marker2D:
 	return get_tree().current_scene.find_child("StartPos")
+
+
+func get_game_over_screen() -> Control:
+	return get_tree().current_scene.find_child("GameOver")

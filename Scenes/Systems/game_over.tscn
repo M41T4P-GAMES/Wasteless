@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://w0jvaw4i5cql"]
+
+[ext_resource type="Script" uid="uid://bvio26wgc1o48" path="res://Scripts/game_over.gd" id="1_rr6k1"]
+
+[node name="GameOver" type="PanelContainer" unique_id=1774312984]
+process_mode = 3
+offset_right = 768.0
+offset_bottom = 384.0
+script = ExtResource("1_rr6k1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=102263949]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2120819392]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1477143440]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "GAME OVER!"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1146082550]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1046463760]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=917415297]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1069844972]
+layout_mode = 2
+text = "Money Spent:"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1542911644]
+layout_mode = 2
+text = "Money Earned:"
+
+[node name="Empty" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2137083211]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=311192946]
+layout_mode = 2
+text = "Days Survived:"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=834365205]
+layout_mode = 2
+
+[node name="MoneySpent" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=431869788]
+unique_name_in_owner = true
+layout_mode = 2
+text = "€100"
+
+[node name="MoneyEarned" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1692720247]
+unique_name_in_owner = true
+layout_mode = 2
+text = "€100"
+
+[node name="Empty" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1528727367]
+layout_mode = 2
+
+[node name="DaySurvived" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=136563144]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+horizontal_alignment = 2
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1394225458]
+layout_mode = 2
+text = "Continue"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

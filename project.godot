@@ -14,14 +14,20 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="GodotProjectTemplate"
-run/main_scene="uid://d16rc67h4lop6"
+config/name="Wasteless"
+config/version="0.1.0"
+run/main_scene="uid://srroajpvwlgf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/Textures/icon.svg"
 
 [autoload]
 
 Global="*uid://dx3gx6swf63il"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [file_customization]
 

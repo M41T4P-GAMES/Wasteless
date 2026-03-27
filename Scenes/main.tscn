@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://cv87xc8r31jpw" path="res://Scenes/Systems/billing.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c50cfyr6wqlsp" path="res://Scenes/Interactables/shower.tscn" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://dn10sp8rt5d0l" path="res://Scenes/Interactables/cooking.tscn" id="4_21xkr"]
-[ext_resource type="PackedScene" uid="uid://bck5fh4l32aw0" path="res://Scenes/Systems/day_count.tscn" id="6_21xkr"]
 
 [node name="Main" type="Node2D" unique_id=1340774565]
 
@@ -30,11 +29,3 @@ offset_left = 192.0
 offset_top = 128.0
 offset_right = 960.0
 offset_bottom = 512.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2011890766]
-
-[node name="DayCount" parent="CanvasLayer" unique_id=1081439678 instance=ExtResource("6_21xkr")]
-offset_left = -52.0
-offset_top = 67.0
-offset_right = -12.0
-offset_bottom = 107.0

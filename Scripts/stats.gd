@@ -15,6 +15,7 @@ var happiness: float = 50
 
 var money_spent : float = 0
 var money_earned : float = 0
+var out_of_money: bool = false
 
 func _ready():
 	update_labels()
@@ -48,12 +49,13 @@ func set_health(newHealth: float):
 	
 		
 func set_money(newMoney: float):
+	var is_out = false
 	money = newMoney
-	$Money.text = "€%0.2f" % money
 	if money < 0:
 		money = 0
-		return false
-	return true
+		is_out = true
+	$Money.text = "€%0.2f" % money
+	return not is_out
 		
 func set_happiness(newHappiness: float):
 	happiness = newHappiness

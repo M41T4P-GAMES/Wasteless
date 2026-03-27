@@ -244,3 +244,7 @@ offset_bottom = 512.0
 
 [node name="GameOver" parent="UI" unique_id=1967423437 instance=ExtResource("6_dd0ac")]
 visible = false
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 960.0
+offset_bottom = 512.0

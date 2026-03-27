@@ -1,16 +1,12 @@
 [gd_scene format=3 uid="uid://cn8bsei15h7p0"]
 
 [ext_resource type="Script" uid="uid://fjh773d1bol4" path="res://Scripts/Interactables/fridge.gd" id="1_p63if"]
-[ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="1_xtw7g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dm6ue"]
-size = Vector2(128, 128)
+size = Vector2(64, 64)
 
 [node name="Fridge" type="Area2D" unique_id=680826184]
 script = ExtResource("1_p63if")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2034274993]
-texture = ExtResource("1_xtw7g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1535677273]
 shape = SubResource("RectangleShape2D_dm6ue")

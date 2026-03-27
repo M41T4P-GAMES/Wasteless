@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://jhqrofpmbt7p"]
 
 [ext_resource type="Script" uid="uid://dxnyvp6jxely5" path="res://Scripts/Interactables/sofa.gd" id="1_plaxa"]
-[ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="2_7qaov"]
 [ext_resource type="Texture2D" uid="uid://da2bpj658x4l5" path="res://Assets/Textures/Buttons.png" id="3_nu8ds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2s1au"]
-size = Vector2(125, 128)
+size = Vector2(192, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpkky"]
 atlas = ExtResource("3_nu8ds")
@@ -26,11 +25,7 @@ region = Rect2(192, 32, 32, 32)
 [node name="Sofa" type="Area2D" unique_id=1042054607]
 script = ExtResource("1_plaxa")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=409398416]
-texture = ExtResource("2_7qaov")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752216239]
-position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_2s1au")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1454690486]

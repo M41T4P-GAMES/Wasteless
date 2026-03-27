@@ -1,34 +1,76 @@
-[gd_scene format=3 uid="uid://d16rc67h4lop6"]
+[gd_scene format=4 uid="uid://d16rc67h4lop6"]
 
-[ext_resource type="PackedScene" uid="uid://cyytr2t4exfd5" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://jhqrofpmbt7p" path="res://Scenes/Interactables/sofa.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://cv87xc8r31jpw" path="res://Scenes/Systems/billing.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://c50cfyr6wqlsp" path="res://Scenes/Interactables/shower.tscn" id="3_kry3j"]
-[ext_resource type="PackedScene" uid="uid://dn10sp8rt5d0l" path="res://Scenes/Interactables/cooking.tscn" id="4_21xkr"]
-[ext_resource type="PackedScene" uid="uid://cn8bsei15h7p0" path="res://Scenes/Interactables/fridge.tscn" id="6_344ge"]
+[ext_resource type="PackedScene" uid="uid://dn10sp8rt5d0l" path="res://Scenes/Interactables/cooking.tscn" id="1_8gbba"]
+[ext_resource type="Texture2D" uid="uid://c57pt73hbrcps" path="res://Assets/Textures/tilemap.png" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://cyytr2t4exfd5" path="res://Scenes/Player/player.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cn8bsei15h7p0" path="res://Scenes/Interactables/fridge.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://c50cfyr6wqlsp" path="res://Scenes/Interactables/shower.tscn" id="5_21xkr"]
+[ext_resource type="PackedScene" uid="uid://jhqrofpmbt7p" path="res://Scenes/Interactables/sofa.tscn" id="6_21xkr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
+texture = ExtResource("1_jjgbg")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2.877739, -8, -2.877739, 0, 8, -0.17985725, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.17985725, 8, -0.17985725, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.17985725, 2.877739, 0, 3.057598, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8gbba"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_bo1nx")
 
 [node name="Main" type="Node2D" unique_id=1340774565]
 
 [node name="StartPos" type="Marker2D" parent="." unique_id=950694550]
-position = Vector2(640, 224)
+position = Vector2(688, 400)
 
-[node name="Player" parent="." unique_id=724740399 instance=ExtResource("1_jjgbg")]
-position = Vector2(640, 224)
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1356592647]
+texture_filter = 1
+position = Vector2(288, 192)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAABAAAAAAABAAMAAAAAAAEAAAAAAAQAAAABAAEAAAABAAQAAAAAAAIAAAAAAAEAAAABAAIAAAAAAAEAAAD//wMAAAABAAAAAAD//wIAAAABAAAAAAD//wEAAAABAAAAAAD//wAAAAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAACAAAAAAABAAAAAAACAAEAAAABAAAAAAACAAIAAAABAAAAAAACAAMAAAABAAAAAAABAAMAAAABAAAAAAAAAAMAAAAAAAEAAAD//wQAAAABAAAAAAD//wUAAAABAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAACAAUAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAMAAAAAAAAAAAADAAIAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAABAAIAAAD//wYAAAABAAAAAAAAAAYAAAABAAAAAAABAAYAAAABAAAAAAACAAYAAAABAAAAAAADAAYAAAABAAAAAAAEAAYAAAAAAAIAAAAFAAYAAAABAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAGAP//AAABAAAAAAADAAAAAAADAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAAHAAAAAAAEAAEAAAAIAAAAAAABAAEAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAAJAAAAAAABAAAAAAAGAAYAAAABAAAAAAAHAAYAAAABAAAAAAAIAAYAAAABAAAAAAAJAAYAAAABAAAAAAAJAAUAAAABAAAAAAAJAAQAAAABAAAAAAAJAAMAAAABAAAAAAAJAAIAAAABAAAAAAAJAAEAAAABAAAAAAAIAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_8gbba")
 
-[node name="Sofa" parent="." unique_id=1042054607 instance=ExtResource("2_bo1nx")]
-position = Vector2(120, 176)
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1263577717]
+texture_filter = 1
+position = Vector2(288, 192)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAIAAUAAAAEAAAAAAAGAAUAAAACAAAAAAAHAAUAAAADAAAAAAAHAAAAAAAEAAIAAAA=")
+tile_set = SubResource("TileSet_8gbba")
 
-[node name="Shower" parent="." unique_id=680826184 instance=ExtResource("3_kry3j")]
-position = Vector2(320, 456)
+[node name="Player" parent="." unique_id=724740399 instance=ExtResource("2_bo1nx")]
+position = Vector2(688, 400)
 
-[node name="Cooking" parent="." unique_id=1722946303 instance=ExtResource("4_21xkr")]
-position = Vector2(896, 440)
+[node name="Cooking" parent="." unique_id=1722946303 instance=ExtResource("1_8gbba")]
+position = Vector2(768, 240)
 
-[node name="Fridge" parent="." unique_id=1582545460 instance=ExtResource("6_344ge")]
+[node name="Fridge" parent="." unique_id=680826184 instance=ExtResource("4_kry3j")]
+position = Vector2(512, 240)
 
-[node name="Billing" parent="." unique_id=1774312984 instance=ExtResource("3_8gbba")]
-visible = false
-offset_left = 192.0
-offset_top = 128.0
-offset_right = 960.0
-offset_bottom = 512.0
+[node name="Shower" parent="." unique_id=643307894 instance=ExtResource("5_21xkr")]
+position = Vector2(352, 224)
+
+[node name="Sofa" parent="." unique_id=1042054607 instance=ExtResource("6_21xkr")]
+position = Vector2(768, 544)

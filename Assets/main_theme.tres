@@ -1,0 +1,31 @@
+[gd_resource type="Theme" format=3 uid="uid://ddrwsvcfplatw"]
+
+[ext_resource type="FontFile" uid="uid://cfarutyervafy" path="res://Assets/Fonts/BoldPixels.ttf" id="1_j03tf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j03tf"]
+bg_color = Color(0.9950971, 0.7172664, 0.46737856, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65lvl"]
+bg_color = Color(0.98039216, 0.59607846, 0.1764706, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn4lo"]
+bg_color = Color(0.6556577, 0.3768629, 0.02830685, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Button/fonts/font = ExtResource("1_j03tf")
+Button/styles/hover = SubResource("StyleBoxFlat_j03tf")
+Button/styles/normal = SubResource("StyleBoxFlat_65lvl")
+Button/styles/pressed = SubResource("StyleBoxFlat_xn4lo")
+Label/fonts/font = ExtResource("1_j03tf")

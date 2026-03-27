@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://srroajpvwlgf"]
 
 [ext_resource type="Script" uid="uid://cfcdpdowxjbsb" path="res://Scripts/UI/main_menu.gd" id="1_5wsvm"]
+[ext_resource type="Theme" uid="uid://ddrwsvcfplatw" path="res://Assets/main_theme.tres" id="1_i2xx2"]
 
 [node name="MainMenu" type="Control" unique_id=1605110217]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_i2xx2")
 script = ExtResource("1_5wsvm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1611166561]
@@ -18,27 +20,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -136.0
-offset_top = -91.0
-offset_right = 136.0
-offset_bottom = 91.0
+offset_left = -188.0
+offset_top = -28.0
+offset_right = 188.0
+offset_bottom = 196.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 28
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=202201959]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 64
 text = "Play"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=647293988]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 64
 text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1254247633]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 64
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]

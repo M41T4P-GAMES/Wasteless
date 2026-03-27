@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dgubnmtp1pwdl"]
+[gd_scene format=3 uid="uid://bgsf2krd8hx25"]
 
 [ext_resource type="Script" uid="uid://c4hv0o5g2w7fb" path="res://Scripts/stats.gd" id="1_274h8"]
 [ext_resource type="Texture2D" uid="uid://b3gxfxquqr5un" path="res://Assets/Textures/Bars/hp_background.png" id="2_vnshp"]
@@ -13,6 +13,7 @@ anchors_preset = 0
 script = ExtResource("1_274h8")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=918936238]
+texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
 offset_top = -3.0
@@ -24,6 +25,7 @@ texture_over = ExtResource("3_suqnu")
 texture_progress = ExtResource("4_j41ye")
 
 [node name="HappinessBar" type="TextureProgressBar" parent="." unique_id=1098592339]
+texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
 offset_top = 83.0
@@ -36,10 +38,10 @@ texture_progress = ExtResource("6_6fbgl")
 
 [node name="Money" type="Label" parent="." unique_id=580386907]
 layout_mode = 0
-offset_left = 779.0
+offset_left = 631.0
 offset_top = 1.0
-offset_right = 1078.0
+offset_right = 930.0
 offset_bottom = 90.0
 theme_override_font_sizes/font_size = 48
 text = "€500.00"
-horizontal_alignment = 2
+horizontal_alignment = 1

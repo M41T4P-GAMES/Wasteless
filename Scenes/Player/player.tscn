@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ulwogkyabnag" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="1_uvnfx"]
-[ext_resource type="PackedScene" uid="uid://dgubnmtp1pwdl" path="res://Scenes/Systems/stats.tscn" id="3_xpcdj"]
+[ext_resource type="PackedScene" path="res://Scenes/Systems/stats.tscn" id="3_htcer"]
 [ext_resource type="PackedScene" uid="uid://bck5fh4l32aw0" path="res://Scenes/Systems/day_count.tscn" id="4_mtuoh"]
 [ext_resource type="PackedScene" uid="uid://cv87xc8r31jpw" path="res://Scenes/Systems/billing.tscn" id="5_htcer"]
 
@@ -28,7 +28,7 @@ shape = SubResource("RectangleShape2D_xpcdj")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=14132592]
 
-[node name="Stats" parent="UI" unique_id=115414059 instance=ExtResource("3_xpcdj")]
+[node name="Stats" parent="UI" unique_id=1622692351 instance=ExtResource("3_htcer")]
 
 [node name="DayCount" parent="UI" unique_id=1081439678 instance=ExtResource("4_mtuoh")]
 offset_left = -56.0

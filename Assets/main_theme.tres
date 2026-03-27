@@ -23,9 +23,15 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j03tf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65lvl"]
+
 [resource]
 Button/fonts/font = ExtResource("1_j03tf")
 Button/styles/hover = SubResource("StyleBoxFlat_j03tf")
 Button/styles/normal = SubResource("StyleBoxFlat_65lvl")
 Button/styles/pressed = SubResource("StyleBoxFlat_xn4lo")
 Label/fonts/font = ExtResource("1_j03tf")
+Panel/styles/panel = SubResource("StyleBoxEmpty_j03tf")
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_65lvl")

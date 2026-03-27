@@ -30,7 +30,8 @@ theme_override_constants/margin_bottom = 30
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2120819392]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1477143440]
+[node name="DayLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1477143440]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "DAY 1 ENDED"
@@ -63,18 +64,31 @@ layout_mode = 2
 layout_mode = 2
 text = "Total:"
 
+[node name="Empty2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=447901579]
+layout_mode = 2
+
+[node name="Empty3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1696090265]
+layout_mode = 2
+
+[node name="Empty4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1316438673]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=840351403]
+layout_mode = 2
+text = "Remaining:"
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=834365205]
 layout_mode = 2
 
 [node name="ElectricityAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=431869788]
 unique_name_in_owner = true
 layout_mode = 2
-text = "€100"
+text = "€100.00"
 
 [node name="WaterAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1692720247]
 unique_name_in_owner = true
 layout_mode = 2
-text = "€100"
+text = "€100.00"
 
 [node name="Empty" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1528727367]
 layout_mode = 2
@@ -82,7 +96,21 @@ layout_mode = 2
 [node name="TotalAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=755295378]
 unique_name_in_owner = true
 layout_mode = 2
-text = "€200"
+text = "€200.00"
+
+[node name="Empty2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2027269586]
+layout_mode = 2
+
+[node name="Empty3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=985010713]
+layout_mode = 2
+
+[node name="Empty4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=364325107]
+layout_mode = 2
+
+[node name="RemainingAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1714775828]
+unique_name_in_owner = true
+layout_mode = 2
+text = "€200.86"
 
 [node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1394225458]
 unique_name_in_owner = true

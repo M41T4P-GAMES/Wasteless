@@ -16,12 +16,17 @@ var happiness: float = 50
 var money_spent : float = 0
 var money_earned : float = 0
 
+func _ready():
+	update_labels()
+
+func update_labels():
+	$HealthBar.value = health
+	$Money.text = "€%0.2f" % money
+	$HappinessBar.value = happiness
+
 func _physics_process(delta: float):
 	hurt(delta * HEALTH_DECREASE_PER_SEC)
 	sadder(delta * HAPPINESS_DECREASE_PER_SEC)
-	$HealthBar.value = health
-	$HappinessBar.value = happiness
-	$Money.text = "€%0.2f" % money
 
 func get_health():
 	return health
@@ -34,14 +39,17 @@ func get_happiness():
 
 func set_health(newHealth: float):
 	health = newHealth
+	$HealthBar.value = health
 	if health <= 0:
 		Global.get_game_over_screen().game_over(Global.get_day_count().current_day, money_spent, money_earned)
 		return
 	elif health > MAX_HEALTH:
 		health = MAX_HEALTH
+	
 		
 func set_money(newMoney: float):
 	money = newMoney
+	$Money.text = "€%0.2f" % money
 	if money < 0:
 		money = 0
 		return false
@@ -49,6 +57,7 @@ func set_money(newMoney: float):
 		
 func set_happiness(newHappiness: float):
 	happiness = newHappiness
+	$HappinessBar.value = happiness
 	if happiness <= 0:
 		Global.get_game_over_screen().game_over(Global.get_day_count().current_day, money_spent, money_earned)
 		return

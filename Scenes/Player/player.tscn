@@ -234,8 +234,6 @@ debug_color = Color(0, 0.6363187, 0.41029975, 0.41960785)
 [node name="Stats" parent="UI" unique_id=1622692351 instance=ExtResource("3_htcer")]
 
 [node name="DayCount" parent="UI" unique_id=1081439678 instance=ExtResource("4_mtuoh")]
-offset_left = -56.0
-offset_right = -16.0
 
 [node name="Billing" parent="UI" unique_id=1774312984 instance=ExtResource("5_htcer")]
 visible = false

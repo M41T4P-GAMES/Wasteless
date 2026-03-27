@@ -12,12 +12,13 @@ func _ready() -> void:
 
 func interact() -> void:
 	var player : Player = Global.get_player()
-	player.can_move = false
-	if not has_cooked and Global.get_stats().fridge_stock > 0:
-		Global.get_stats().use_fridge_stock(1)
-		$CookTimer.start(COOKING_DURATION)
-	else:
-		player.can_move = true
+	if player:
+		player.can_move = false
+		if not has_cooked and Global.get_stats().fridge_stock > 0:
+			Global.get_stats().use_fridge_stock(1)
+			$CookTimer.start(COOKING_DURATION)
+		else:
+			player.can_move = true
 
 func _on_cook_timer_timeout() -> void:
 	has_cooked = true
@@ -37,4 +38,5 @@ func finish() -> void:
 	has_cooked = false
 	$CanvasLayer/Control.hide()
 	var player : Player = Global.get_player()
-	player.can_move = true
+	if player:
+		player.can_move = true

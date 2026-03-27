@@ -2,9 +2,26 @@
 
 [ext_resource type="Script" uid="uid://dxnyvp6jxely5" path="res://Scripts/Interactables/sofa.gd" id="1_plaxa"]
 [ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="2_7qaov"]
+[ext_resource type="Texture2D" uid="uid://da2bpj658x4l5" path="res://Assets/Textures/Buttons.png" id="3_nu8ds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2s1au"]
 size = Vector2(125, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpkky"]
+atlas = ExtResource("3_nu8ds")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3p70"]
+atlas = ExtResource("3_nu8ds")
+region = Rect2(224, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nu8ds"]
+atlas = ExtResource("3_nu8ds")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju31e"]
+atlas = ExtResource("3_nu8ds")
+region = Rect2(192, 32, 32, 32)
 
 [node name="Sofa" type="Area2D" unique_id=1042054607]
 script = ExtResource("1_plaxa")
@@ -40,26 +57,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -142.0
-offset_top = -117.0
-offset_right = 152.0
-offset_bottom = 117.0
+offset_left = -110.0
+offset_top = -50.0
+offset_right = 110.0
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
-[node name="WorkButton" type="Button" parent="CanvasLayer/ModeUI/VBoxContainer" unique_id=1099682012]
+[node name="WorkButton" type="TextureButton" parent="CanvasLayer/ModeUI/VBoxContainer" unique_id=1068083897]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(250, 250)
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Work"
+texture_normal = SubResource("AtlasTexture_tpkky")
+texture_pressed = SubResource("AtlasTexture_s3p70")
+stretch_mode = 0
 
-[node name="RestingButton" type="Button" parent="CanvasLayer/ModeUI/VBoxContainer" unique_id=147598469]
+[node name="RestingButton" type="TextureButton" parent="CanvasLayer/ModeUI/VBoxContainer" unique_id=1577163509]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(250, 250)
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Rest"
+texture_normal = SubResource("AtlasTexture_nu8ds")
+texture_pressed = SubResource("AtlasTexture_ju31e")
+stretch_mode = 0
 
 [node name="MoneyGainTimer" type="Timer" parent="." unique_id=383143198]
 

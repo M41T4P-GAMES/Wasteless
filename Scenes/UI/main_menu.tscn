@@ -2,6 +2,43 @@
 
 [ext_resource type="Script" uid="uid://cfcdpdowxjbsb" path="res://Scripts/UI/main_menu.gd" id="1_5wsvm"]
 [ext_resource type="Theme" uid="uid://ddrwsvcfplatw" path="res://Assets/main_theme.tres" id="1_i2xx2"]
+[ext_resource type="Texture2D" uid="uid://da2bpj658x4l5" path="res://Assets/Textures/Buttons.png" id="3_o14dv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7lva"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrfpk"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pqbp"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(0, 64, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o14dv"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(0, 96, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gih0s"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(0, 128, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k33u3"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(0, 160, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrjdf"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(96, 96, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqme5"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(96, 128, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jewm6"]
+atlas = ExtResource("3_o14dv")
+region = Rect2(96, 160, 96, 32)
 
 [node name="MainMenu" type="Control" unique_id=1605110217]
 layout_mode = 3
@@ -20,29 +57,41 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -188.0
-offset_top = -28.0
-offset_right = 188.0
-offset_bottom = 196.0
+offset_left = -150.0
+offset_top = -107.0
+offset_right = 150.0
+offset_bottom = 249.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 28
 
-[node name="Play" type="Button" parent="VBoxContainer" unique_id=202201959]
+[node name="Play" type="TextureButton" parent="VBoxContainer" unique_id=1047173033]
 unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Play"
+texture_normal = SubResource("AtlasTexture_u7lva")
+texture_pressed = SubResource("AtlasTexture_mrfpk")
+texture_hover = SubResource("AtlasTexture_4pqbp")
+stretch_mode = 0
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=647293988]
+[node name="Settings" type="TextureButton" parent="VBoxContainer" unique_id=823745626]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Settings"
+texture_normal = SubResource("AtlasTexture_o14dv")
+texture_pressed = SubResource("AtlasTexture_gih0s")
+texture_hover = SubResource("AtlasTexture_k33u3")
+stretch_mode = 0
 
-[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1254247633]
+[node name="Quit" type="TextureButton" parent="VBoxContainer" unique_id=393095937]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Quit"
+texture_normal = SubResource("AtlasTexture_lrjdf")
+texture_pressed = SubResource("AtlasTexture_wqme5")
+texture_hover = SubResource("AtlasTexture_jewm6")
+stretch_mode = 0
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]

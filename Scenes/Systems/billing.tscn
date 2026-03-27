@@ -3,6 +3,19 @@
 [ext_resource type="Theme" uid="uid://ddrwsvcfplatw" path="res://Assets/main_theme.tres" id="1_5rm5y"]
 [ext_resource type="Script" uid="uid://bjkkqwktpvqgx" path="res://Scripts/billing.gd" id="1_qbey1"]
 [ext_resource type="Texture2D" uid="uid://1oxfm7l1xc2e" path="res://Assets/Textures/day_end_background.png" id="2_pqet0"]
+[ext_resource type="Texture2D" uid="uid://da2bpj658x4l5" path="res://Assets/Textures/Buttons.png" id="4_qg3yg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_140ct"]
+atlas = ExtResource("4_qg3yg")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbwew"]
+atlas = ExtResource("4_qg3yg")
+region = Rect2(96, 32, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al3ds"]
+atlas = ExtResource("4_qg3yg")
+region = Rect2(96, 64, 96, 32)
 
 [node name="Billing" type="PanelContainer" unique_id=1774312984]
 process_mode = 3
@@ -112,9 +125,12 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "€200.86"
 
-[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1394225458]
+[node name="ContinueButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=908895380]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Continue"
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_140ct")
+texture_pressed = SubResource("AtlasTexture_qbwew")
+texture_hover = SubResource("AtlasTexture_al3ds")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

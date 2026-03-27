@@ -2,9 +2,32 @@
 
 [ext_resource type="Texture2D" uid="uid://lplmg4tpwna6" path="res://Assets/Textures/icon.svg" id="1_hwvyd"]
 [ext_resource type="Script" uid="uid://dcj8rid366fi5" path="res://Scripts/Interactables/cooking.gd" id="1_v5sos"]
+[ext_resource type="Texture2D" uid="uid://da2bpj658x4l5" path="res://Assets/Textures/Buttons.png" id="3_qqk6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5sos"]
 size = Vector2(128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5356"]
+atlas = ExtResource("3_qqk6l")
+region = Rect2(224, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w722"]
+atlas = ExtResource("3_qqk6l")
+region = Rect2(224, 128, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qqk6l"]
+load_path = "res://.godot/imported/Buttons.png-e969bff4625d962888086678bc20bc2f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_235ae"]
+atlas = SubResource("CompressedTexture2D_qqk6l")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dfoyj"]
+load_path = "res://.godot/imported/Buttons.png-e969bff4625d962888086678bc20bc2f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvkvy"]
+atlas = SubResource("CompressedTexture2D_dfoyj")
+region = Rect2(192, 128, 32, 32)
 
 [node name="Cooking" type="Area2D" unique_id=1722946303]
 script = ExtResource("1_v5sos")
@@ -32,20 +55,38 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=578523303]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=2143405798]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -50.0
+offset_right = 102.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
 
-[node name="EatButton" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=947799857]
+[node name="EatButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer" unique_id=1129257015]
 unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-text = "Eat"
+texture_normal = SubResource("AtlasTexture_s5356")
+texture_pressed = SubResource("AtlasTexture_2w722")
+stretch_mode = 0
 
-[node name="DonateButton" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=436355683]
+[node name="DonateButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer" unique_id=254559222]
 unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-text = "Donate"
+texture_normal = SubResource("AtlasTexture_235ae")
+texture_pressed = SubResource("AtlasTexture_pvkvy")
+stretch_mode = 0
 
 [node name="CookTimer" type="Timer" parent="." unique_id=1236113871]
 one_shot = true

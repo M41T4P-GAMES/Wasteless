@@ -13,8 +13,10 @@ func _process(delta: float) -> void:
 
 func interact() -> void:
 	var player : Player = Global.get_player()
-	player.can_move = !player.can_move
-	if player.can_move == false:
-		showering = true
-	else:
-		showering = false
+	if player:
+		if player.can_move:
+			player.can_move = false
+			showering = true
+		else:
+			player.can_move = true
+			showering = false

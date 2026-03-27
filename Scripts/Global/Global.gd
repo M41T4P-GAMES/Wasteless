@@ -22,3 +22,7 @@ func get_start_pos() -> Marker2D:
 
 func get_game_over_screen() -> Control:
 	return get_tree().current_scene.find_child("GameOver")
+	
+
+func get_main() -> Node2D:
+	return get_tree().current_scene

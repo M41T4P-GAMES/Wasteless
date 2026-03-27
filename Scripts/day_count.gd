@@ -14,6 +14,13 @@ func day_end() -> void:
 	get_tree().paused = true
 	var stats = Global.get_stats()
 	Global.get_billing_screen().calculate(stats.used_water, stats.used_electricity)
+	var main = Global.get_main()
+	main.get_node("Sofa").mode = main.get_node("Sofa").Mode.NONE
+	if not main.get_node("Sofa/MoneyGainTimer").is_stopped():
+		main.get_node("Sofa/MoneyGainTimer").stop()
+	main.get_node("Shower").showering = false
+	if not main.get_node("Cooking/CookTimer").is_stopped():
+		main.get_node("Cooking/CookTimer").stop()
 
 
 func increase_day_count() -> void:

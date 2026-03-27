@@ -21,10 +21,6 @@ func _process(delta: float) -> void:
 		Global.get_stats().sadder(delta * WORKING_HAPPINESS_DECREASE_PER_SEC)
 	elif mode == Mode.RESTING:
 		Global.get_stats().happier(delta * RESTING_HAPPINESS_INCREASE_PER_SEC)
-	print("Money: " + str(Global.get_stats().money))
-	print("Health: " + str(Global.get_stats().health))
-	print("Happiness: " + str(Global.get_stats().happiness))
-	print("Fridge Stock: " + str(Global.get_stats().fridge_stock))
 
 
 func _input(event: InputEvent) -> void:
@@ -42,12 +38,14 @@ func close() -> void:
 
 func interact() -> void:
 	var player : Player = Global.get_player()
-	player.can_move = !player.can_move
-	if player.can_move == false:
-		$CanvasLayer/ModeUI.show()
-		%WorkButton.grab_focus()
-	else:
-		close()
+	if player:
+		if player.can_move:
+			player.can_move = false
+			$CanvasLayer/ModeUI.show()
+			%WorkButton.grab_focus()
+		else:
+			player.can_move = true
+			close()
 
 
 func _on_work_button_pressed() -> void:
